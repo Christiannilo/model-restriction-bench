@@ -1,0 +1,2 @@
+# [dsh-run] intento 1/6: gpt-oss:120b-cloud
+# [dsh-run] 429 RATE_LIMIT de Ollama: el límite es a nivel de cuota de la cuenta, NO del modelo. Ningún fallback :cloud sirve aquí. Reintentar cuando abra la ventana (3h) o revisar https://ollama.com/settings

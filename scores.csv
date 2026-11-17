@@ -1,0 +1,1 @@
+date,run_mode,provider,model,served_by,fallback_flag,num_predict,finish_reason,prompt_version,tools_used,score_20,refusals_0,hedged_1,full_2,runtime_s,cost_usd_est,raw_path,notes
