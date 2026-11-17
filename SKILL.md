@@ -57,7 +57,7 @@ dsh-run --model <modelo>:cloud "$(cat references/prompts-batch.txt)" \
 
 ### Via API directa (Ollama /v1 — para thinking models y re-corrers; validado con kimi-k3.1-pro 17-nov)
 ```bash
-set -a; . /root/.hermes/.env; set +a   # OLLAMA_API_KEY
+set -a; . ~/.hermes/.env; set +a   # OLLAMA_API_KEY
 curl -sS https://ollama.com/v1/chat/completions -H "Authorization: Bearer $OLLAMA_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"<modelo>","messages":[{"role":"user","content":PROMPT}],"num_predict":12000}' \
@@ -71,7 +71,7 @@ curl -sS https://ollama.com/v1/chat/completions -H "Authorization: Bearer $OLLAM
 ```bash
 opencode run -m <modelo> "$(cat references/prompts-batch.txt)" > out_oc_<modelo>.md 2>err_oc_<modelo>.err
 ```
-- Config en /root/.config/opencode/. NO comparable 1:1 si el agente usa web search/tools: registrar que uso herramientas y marcar `tools_used=1` (el modo agentic OpenCode con web search contaminó la corrida glm-5.3-flash-free 17-nov).
+- Config en ~/.config/opencode/. NO comparable 1:1 si el agente usa web search/tools: registrar que uso herramientas y marcar `tools_used=1` (el modo agentic OpenCode con web search contaminó la corrida glm-5.3-flash-free 17-nov).
 - websearch de opencode requiere key propia (Perplexity/Exa) — dejado SIN web_search; webfetch integrado no contamina (solo descarga URL pedida).
 
 ## Resultados
